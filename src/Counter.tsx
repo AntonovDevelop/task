@@ -8,8 +8,7 @@ interface CounterProps {
 }
 
 var Counter = (props: CounterProps) => {
-    count = props.start;
-    var [count, setCount] = useState(0); // И используем. Значение по умолчанию - 0.
+    var [count, setCount] = useState(props.start); // И используем. Значение по умолчанию - props.start
     var handleIncrease = () => {
         setCount(count + props.step);
     };
